@@ -2,7 +2,7 @@ require 'REST'
 require 'json'
 require 'cgi'
 #params = {"username"=>'peterneubauer', 'password'=>'xxx'}
-params = {"username"=>'thoughtmade', 'password'=>'th0ughtm2d3'}
+params = {"username"=>'thoughtmade', 'password'=>'xxx'}
 conn = REST::Connection.new 'http://api.twitter.com/peterneubauer', params
 followers = JSON.parse(conn.request_get('/friends/ids.json'))
 puts followers.inspect
